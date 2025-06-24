@@ -1,0 +1,121 @@
+body {
+  width: 320px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  color: blue;
+  font-size: 16px;
+  text-align: center;
+  top: 0;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.settings-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.more-settings {
+  transition: 0.2s;
+}
+
+.more-settings:hover {
+  font-size: 16px;
+}
+
+.more-settings {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.content {
+  margin-inline: 1em;
+  margin-bottom: 50px;
+  overflow-y: auto;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.content p {
+  font-size: large;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 1em;
+  margin-bottom: 1em;
+  bottom: 0;
+}
+
+.footer a {
+  text-decoration: none;
+  color: darkgrey;
+  transition: 0.2s;
+}
+
+.footer a:hover {
+  font-weight: bold;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}

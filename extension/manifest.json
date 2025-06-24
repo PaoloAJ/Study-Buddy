@@ -1,0 +1,23 @@
+{
+  "name": "Study Buddy",
+  "description": "Blocks and replaces compulsive websites with motivational quotes and reminders",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "popup_icon.png"
+    }
+  },
+  "permissions": ["scripting", "alarms", "storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

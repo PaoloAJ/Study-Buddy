@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>Study Buddy</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Study Buddy</h1>
+      <div class="switch-container">
+        <label class="switch">
+          <input type="checkbox" id="toggleExtension" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="settings-line">
+        <h2 class="quick-settings">Quick Settings</h2>
+        <a class="more-settings" href="https://www.youtube.com/" target="_blank"
+          >More Settings</a
+        >
+      </div>
+
+      <div class="alarm-controls">
+        <h2>Set Custom Alarm</h2>
+        <input id="minutes" type="number" min="1" value="1" /> minutes
+        <button id="set-alarm">Start Alarm</button>
+      </div>
+
+      <h2 id="alarm-time">No alarm set</h2>
+    </main>
+
+    <footer class="footer">
+      <a class="support-link" href="https://www.youtube.com/" target="_blank">
+        Get Support
+      </a>
+      <a class="homepage-link" href="https://www.youtube.com/" target="_blank">
+        Go to Homepage
+      </a>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
