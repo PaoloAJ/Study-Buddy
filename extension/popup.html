@@ -18,29 +18,121 @@
     </header>
 
     <main class="content">
-      <div class="settings-line">
-        <h2 class="quick-settings">Quick Settingsg</h2>
-        <a class="more-settings" href="https://www.youtube.com/" target="_blank"
-          >More Settings</a
-        >
+      <div class="timer-section">
+        <div class="section-header">
+          <h2 class="section-title">Pomodoro Timer</h2>
+          <button id="settingsBtn" class="settings-btn">
+            <img src="setting.png" />
+          </button>
+        </div>
+
+        <div class="timer-display">
+          <div class="time" id="timeDisplay">--:--</div>
+          <div class="phase" id="phaseDisplay">Loading...</div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="timer-controls">
+          <button id="startBtn" class="timer-btn start-btn">Start</button>
+          <button id="stopBtn" class="timer-btn stop-btn">Stop</button>
+          <button id="resetBtn" class="timer-btn reset-btn">Reset</button>
+        </div>
+
+        <div class="timer-stats">
+          <div class="stat-item">
+            <span class="stat-label">Completed:</span>
+            <span class="stat-value" id="completedCount">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Status:</span>
+            <span class="stat-value" id="statusText">Ready</span>
+          </div>
+        </div>
       </div>
 
-      <div class="alarm-controls">
-        <h2>Set Custom Alarm</h2>
-        <input id="minutes" type="number" min="1" value="1" /> minutes
-        <button id="set-alarm">Start Alarm</button>
-      </div>
+      <div class="website-section">
+        <div class="section-header">
+          <h2 class="section-title">Blocked Websites</h2>
+        </div>
 
-      <h2 id="alarm-time">No alarm set</h2>
+        <div class="website-input-container">
+          <div class="input-group">
+            <input
+              type="text"
+              id="websiteInput"
+              placeholder="Enter website URL (e.g., facebook.com)"
+            />
+            <button id="addWebsiteBtn" class="add-btn">Add</button>
+          </div>
+          <button id="addCurrentSiteBtn" class="current-site-btn">
+            Add Current Site
+          </button>
+        </div>
+
+        <div class="website-list-container">
+          <div class="list-header">
+            <h3 class="list-title">Currently Blocked:</h3>
+            <button id="clearAllBtn" class="clear-all-btn">Clear All</button>
+          </div>
+          <div id="websiteList" class="website-list">
+            <!-- Website items will be populated here -->
+          </div>
+        </div>
+      </div>
     </main>
 
+    <div id="settingsModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Timer Settings</h3>
+          <button id="closeSettings" class="close-btn">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="setting-group">
+            <label for="workTime">Work Time (minutes):</label>
+            <input type="number" id="workTime" min="1" max="60" value="25" />
+          </div>
+
+          <div class="setting-group">
+            <label for="shortBreak">Short Break (minutes):</label>
+            <input type="number" id="shortBreak" min="1" max="30" value="5" />
+          </div>
+
+          <div class="setting-group">
+            <label for="longBreak">Long Break (minutes):</label>
+            <input type="number" id="longBreak" min="1" max="60" value="15" />
+          </div>
+
+          <div class="setting-group">
+            <label for="longBreakInterval">Long Break After (pomodoros):</label>
+            <input
+              type="number"
+              id="longBreakInterval"
+              min="2"
+              max="10"
+              value="4"
+            />
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="saveSettings" class="save-btn">Save Settings</button>
+          <button id="resetSettings">Reset</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
-      <a class="support-link" href="https://www.youtube.com/" target="_blank">
+      <!-- <a class="support-link" href="https://www.youtube.com/" target="_blank">
         Get Support
       </a>
       <a class="homepage-link" href="https://www.youtube.com/" target="_blank">
         Go to Homepage
-      </a>
+      </a> -->
+      <a> Website Coming Soon! </a>
     </footer>
 
     <script src="popup.js"></script>

@@ -9,15 +9,24 @@
       "16": "popup_icon.png"
     }
   },
-  "permissions": ["scripting", "alarms", "storage", "tabs"],
+  "permissions": [
+    "scripting",
+    "alarms",
+    "storage",
+    "tabs",
+    "notifications",
+    "tts",
+    "activeTab",
+    "offscreen"
+  ],
   "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
+  "web_accessible_resources": [
     {
-      "matches": ["https://www.instagram.com/*"],
-      "js": ["content.js"]
+      "resources": ["popup_icon.png"],
+      "matches": ["<all_urls>"]
     }
   ]
 }
