@@ -9,16 +9,7 @@
       "16": "popup_icon.png"
     }
   },
-  "permissions": [
-    "scripting",
-    "alarms",
-    "storage",
-    "tabs",
-    "notifications",
-    "tts",
-    "activeTab",
-    "offscreen"
-  ],
+  "permissions": ["alarms", "storage", "tabs", "notifications", "tts"],
   "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
