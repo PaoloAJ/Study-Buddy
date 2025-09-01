@@ -1,8 +1,7 @@
 # macOS system files
 .DS_Store
 
-# Node modules
-./website/node_modules/
+
 
 # Logs
 *.log

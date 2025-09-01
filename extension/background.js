@@ -354,7 +354,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
     if (extensionEnabled && shouldRedirectUrl(tab.url)) {
       // redirect to the motivation page
       // todo: replace with your actual vercel url once deployed
-      const motivationUrl = "https://www.google.com";
+      const motivationUrl = "https://life-buddy-eight.vercel.app/motivation";
 
       try {
         await chrome.tabs.update(tabId, { url: motivationUrl });
