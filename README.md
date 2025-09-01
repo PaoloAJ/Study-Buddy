@@ -30,6 +30,8 @@ I’m currently working on adding:
 - New “Buddy” modules for things like focus, wellness, and accountability
 - Interface improvements
 
+All of these will be available on the website soon!
+
 ---
 
 ## Feedback
