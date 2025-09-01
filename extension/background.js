@@ -311,23 +311,7 @@ class PomodoroTimer {
 const pomodoroTimer = new PomodoroTimer();
 
 // list of distracting websites to redirect (will be loaded from storage)
-let blockedWebsites = [
-  "instagram.com",
-  "youtube.com",
-  "facebook.com",
-  "twitter.com",
-  "tiktok.com",
-  "reddit.com",
-  "netflix.com",
-  "hulu.com",
-  "disneyplus.com",
-  "amazon.com",
-  "ebay.com",
-  "etsy.com",
-  "pinterest.com",
-  "snapchat.com",
-  "twitch.tv",
-];
+let blockedWebsites = [];
 
 // load blocked websites from storage
 async function loadBlockedWebsites() {
@@ -370,7 +354,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
     if (extensionEnabled && shouldRedirectUrl(tab.url)) {
       // redirect to the motivation page
       // todo: replace with your actual vercel url once deployed
-      const motivationUrl = "https://www.youtube.com";
+      const motivationUrl = "https://www.google.com";
 
       try {
         await chrome.tabs.update(tabId, { url: motivationUrl });
