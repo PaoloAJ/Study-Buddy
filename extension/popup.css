@@ -22,6 +22,13 @@ body {
   -webkit-overflow-scrolling: auto;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Completely hides scrollbars */
+}
+
 .header {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -99,6 +106,13 @@ input:checked + .slider:before {
   overflow-x: hidden;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.content::-webkit-scrollbar {
+  display: none; /* WebKit */
 }
 
 .timer-section {
@@ -366,6 +380,13 @@ input:checked + .slider:before {
   overflow-x: hidden;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.website-list-container::-webkit-scrollbar {
+  display: none; /* WebKit */
 }
 
 .list-header {
